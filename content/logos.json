@@ -1,0 +1,23 @@
+[
+  {
+    "href": "https://example.com/research-institute",
+    "title": "Research Institute",
+    "src": "assets/images/research_institute_logo.avif",
+    "alt": "Research Institute Logo",
+    "class": ""
+  },
+  {
+    "href": "https://example.com/university",
+    "title": "University Name",
+    "src": "assets/images/university_logo.avif",
+    "alt": "University Logo",
+    "class": ""
+  },
+  {
+    "href": "https://example.com/department",
+    "title": "Department Name",
+    "src": "assets/images/department_logo.avif",
+    "alt": "Department Logo",
+    "class": "dark:rounded"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "image": "assets/images/static1.avif",
+    "hover": "assets/images/hover1.avif",
+    "title": "Novel Approaches to Machine Learning in Computer Vision",
+    "url": "https://arxiv.org/abs/2024.00001",
+    "authors": "**Academic Researcher**, [Co-Author One](https://example.com), [Co-Author Two](https://example.com)",
+    "venue": "<em><b>Conference on Computer Vision and Pattern Recognition (CVPR)</b></em>, <b>2024</b>",
+    "abstract": "This paper presents a novel approach to computer vision tasks using advanced machine learning techniques, demonstrating significant improvements in accuracy and efficiency.",
+    "pdf": "https://arxiv.org/pdf/2024.00001",
+    "code": "https://github.com/example/repo",
+    "blog": "https://example.com/blog"
+  },
+  {
+    "image": "assets/images/static2.avif",
+    "hover": "assets/images/hover2.avif",
+    "title": "Deep Learning for Natural Language Processing",
+    "url": "https://arxiv.org/abs/2023.00002",
+    "authors": "[Co-Author One](https://example.com), **Academic Researcher**, [Co-Author Three](https://example.com)",
+    "venue": "<em><b>International Conference on Machine Learning (ICML)</b></em>, <b>2023</b>",
+    "abstract": "A comprehensive study of deep learning applications in natural language processing, with a focus on transformer architectures and their variants.",
+    "pdf": "https://arxiv.org/pdf/2023.00002",
+    "code": "https://github.com/example/repo2",
+    "blog": ""
+  },
+  {
+    "image": "assets/images/static3.avif",
+    "hover": "assets/images/hover3.avif",
+    "title": "Robust AI Systems: Challenges and Solutions",
+    "url": "https://arxiv.org/abs/2023.00003",
+    "authors": "**Academic Researcher**, [Co-Author Four](https://example.com), [Co-Author Five](https://example.com)",
+    "venue": "<em><b>Neural Information Processing Systems (NeurIPS)</b></em>, <b>2023</b>",
+    "abstract": "This work addresses the challenges of building robust AI systems and proposes novel solutions for improving system reliability and performance.",
+    "pdf": "https://arxiv.org/pdf/2023.00003",
+    "code": "https://github.com/example/repo3",
+    "blog": "https://example.com/blog2"
+  }
+]

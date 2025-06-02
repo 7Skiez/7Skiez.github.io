@@ -1,0 +1,31 @@
+<section aria-labelledby="{{ section_id }}-heading" class="section-container">
+  <h2 id="{{ section_id }}-heading" class="section-title">{{ section_title }}</h2>
+  
+  <ul class="space-y-5 md:space-y-6 body-text {{ colors.newsText }} list-none pl-0">
+    {% for item in items %}
+    <li class="timeline-item flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0">
+      <!-- Date column -->
+      <div class="flex-shrink-0 w-full sm:w-20 md:w-24 text-xs sm:text-sm font-medium tracking-wide {{ colors.newsDate }} mb-1 sm:mb-0">
+        {{ item.date }}
+      </div>
+      
+      <!-- Content column -->
+      <div class="flex-grow sm:ml-3 body-text overflow-container leading-relaxed">
+        <div class="flex flex-row flex-wrap items-center gap-2">
+          <!-- Item text content with timeline-content class directly applied to the markdown output -->
+          <span class="timeline-content">{{ item.content | markdown | safe }}</span>
+          
+          <!-- Optional links -->
+          {% if item.links %}
+            {% for link in item.links %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="badge-link blue-badge inline-flex whitespace-nowrap">
+              {{ link.text }}
+            </a>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section> 

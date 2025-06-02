@@ -1,0 +1,10 @@
+<div class="flex justify-center items-center gap-6 md:gap-12 py-4 md:py-5 my-8 md:my-14 border-t border-b border-gray-200">
+  {% for logo in logos %}
+  <a href="{{ logo.href }}" target="_blank" rel="noopener noreferrer" title="{{ logo.title }}" class="h-8 md:h-10 transition-opacity hover:opacity-80">
+    <img src="{{ logo.src }}" 
+         alt="{{ logo.alt }}" 
+         class="w-full h-full object-contain {{ logo.class }}" 
+         onerror="this.onerror=null; this.src='https://placehold.co/120x40/e5e5e5/a3a3a3?text=Logo';">
+  </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,16 @@
+<footer class="py-6 md:pt-8 border-t border-gray-200">
+  <div class="text-center text-xs {{ colors.footerText }} space-y-2">
+    <p>
+      &copy; {{ year }} {{ footer.name | default('John Doe') }}.
+    </p>
+    {% if footer.links %}
+      <div class="text-xs opacity-80">
+        {% for link in footer.links %}
+          <span class="inline-block">
+            {{ link.text | markdown | safe }}
+          </span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</footer>

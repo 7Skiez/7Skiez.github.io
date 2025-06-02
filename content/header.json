@@ -1,0 +1,19 @@
+{
+    "name": "Academic Researcher",
+    "profileImage": "assets/images/profile.avif",
+    "profileAlt": "Profile photo of Academic Researcher",
+    "bio": [
+      "I am a PhD candidate in Computer Science at [University Name](https://anyuniversity.net), working under the supervision of Prof. [Advisor Name](https://anyadvisor.net) in the [Lab Name](https://anylab.net) research group.",
+      "My research focuses on [Research Area 1], [Research Area 2], and [Research Area 3], with particular emphasis on [Specific Research Focus].",
+      "I received my Master's degree in Computer Science from [University Name](https://anyuniversity.net) and my Bachelor's degree in [Field] from [University Name](https://anyuniversity.net).",
+      "My work combines theoretical foundations with practical applications, aiming to advance the state of the art in [Research Field]."
+    ],
+    "navLinks": [
+      { "text": "Email", "href": "mailto:researcher@university.edu" },
+      { "text": "CV", "href": "assets/documents/cv.pdf", "target": "_blank" },
+      { "text": "Google Scholar", "href": "https://scholar.google.com/", "target": "_blank" },
+      { "text": "Twitter", "href": "https://twitter.com/", "target": "_blank" },
+      { "text": "Github", "href": "https://github.com/", "target": "_blank" },
+      { "text": "LinkedIn", "href": "https://linkedin.com/in/", "target": "_blank" }
+    ]
+}

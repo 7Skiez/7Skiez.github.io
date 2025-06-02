@@ -1,0 +1,89 @@
+{% if publications %}
+<section aria-labelledby="publications-heading" class="section-container">
+    <h2 id="publications-heading" class="section-title">Publications & Preprints</h2>
+    
+    <div class="space-y-8 md:space-y-12">
+        {% for pub in publications %}
+        <article class="flex flex-col md:flex-row items-center gap-6 md:gap-8 pb-6 md:pb-8 last:mb-0 last:pb-0 last:border-b-0 border-b {{ colors.border }} group">
+            
+            <!-- Publication image (if available) -->
+            {% if pub.image %}
+            <a href="{{ pub.url }}" target="_blank" rel="noopener noreferrer" class="flex md:w-64 md:min-h-64 md:h-max md:max-h-72 flex-shrink-0 items-center m-auto rounded-lg overflow-hidden">
+                <img 
+                    src="{{ pub.image }}" 
+                    alt="{{ pub.title }} thumbnail" 
+                    class="object-cover w-full h-full rounded-lg shadow-sm {% if pub.hover %} group-hover:opacity-0 {% endif %}" 
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x250/e5e5e5/a3a3a3?text=No+Image'; this.classList.add('bg-gray-100');"
+                    loading="lazy">
+                {% if pub.hover %}
+                <img 
+                    src="{{ pub.hover }}" 
+                    alt="{{ pub.title }} hover thumbnail" 
+                    class="object-cover inset-0 w-full h-full rounded-lg shadow-sm relative -left-full opacity-0 hidden group-hover:opacity-100 group-hover:block" 
+                    loading="lazy">
+                {% endif %}
+            </a>
+            {% endif %}
+            
+            <!-- Publication details -->
+            <div class="flex-grow overflow-container">
+                <!-- Title -->
+                <h3 class="pub-title">
+                    <a href="{{ pub.url }}" target="_blank" rel="noopener noreferrer" class="{{ colors.pubTitleLink }} {{ colors.pubLinkHover }} hover:underline">
+                        {{ pub.title | markdown | safe }}
+                    </a>
+                </h3>
+                
+                <!-- Authors -->
+                <div class="pub-authors">
+                    {{ pub.authors | markdown | safe }}
+                </div>
+                
+                <!-- Venue -->
+                <div class="pub-venue">
+                    {{ pub.venue | safe }}
+                </div>
+                
+                <!-- Abstract (if available) -->
+                {% if pub.abstract %}
+                <div class="pub-abstract">
+                    {{ pub.abstract | markdown | safe }}
+                </div>
+                {% endif %}
+                
+                <!-- Links -->
+                {% if pub.pdf or pub.code is defined or pub.blog or pub.links %}
+                <div class="flex flex-wrap gap-2 mt-3">
+                    {% if pub.blog %}
+                    <a href="{{ pub.blog }}" target="_blank" rel="noopener noreferrer" class="badge-link gray-badge">
+                        Project Page
+                    </a>
+                    {% endif %}
+                    {% if pub.pdf %}
+                    <a href="{{ pub.pdf }}" target="_blank" rel="noopener noreferrer" class="badge-link blue-badge">
+                        arXiv
+                    </a>
+                    {% endif %}
+                    {% if pub.code is defined %}
+                    <a href="{{ pub.code if pub.code else '#' }}" {% if pub.code %}target="_blank" rel="noopener noreferrer"{% endif %} {% if not pub.code %}disabled{% endif %} class="badge-link purple-badge">
+                        Code
+                        {% if pub.code == "" %}
+                            (coming soon)
+                        {% endif %}
+                    </a>
+                    {% endif %}
+                    {% if pub.links %}
+                        {% for link in pub.links %}
+                        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="badge-link">
+                            {{ link.text | markdown | safe }}
+                        </a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}

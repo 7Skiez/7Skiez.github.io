@@ -1,0 +1,23 @@
+{
+    "title": "Academic Portfolio",
+    "description": "A professional academic portfolio showcasing research, publications, and achievements in the field of Computer Science.",
+    "author": "Academic Researcher",
+    "favicon": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>",
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "News",
+        "content": "news.json"
+      },
+      {
+        "type": "publications",
+        "title": "Publications & Preprints",
+        "content": "publications.json"
+      },
+      {
+        "type": "timeline",
+        "title": "Honors & Awards", 
+        "content": "honors.json"
+      }
+    ]
+}

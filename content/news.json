@@ -1,0 +1,22 @@
+[
+    {
+        "date": "03/2024",
+        "content": "Paper <i>\"Novel Approaches to Machine Learning in Computer Vision\"</i> accepted at <b>CVPR 2024</b>"
+    },
+    {
+        "date": "01/2024",
+        "content": "Awarded <b>Research Excellence Fellowship</b> for outstanding contributions to the field"
+    },
+    {
+        "date": "09/2023",
+        "content": "Paper <i>\"Deep Learning for Natural Language Processing\"</i> accepted at <b>ICML 2023</b>"
+    },
+    {
+        "date": "06/2023",
+        "content": "Starting research collaboration with [Research Institute](https://example.com)"
+    },
+    {
+        "date": "03/2023",
+        "content": "Paper <i>\"Robust AI Systems: Challenges and Solutions\"</i> accepted at <b>NeurIPS 2023</b>"
+    }
+]

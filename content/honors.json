@@ -1,0 +1,28 @@
+[
+  {
+    "date": "2024",
+    "content": "<b>Research Excellence Fellowship</b> for outstanding contributions to the field"
+  },
+  {
+    "date": "2023",
+    "content": "<b>Best Paper Award</b> at International Conference on Machine Learning (ICML)"
+  },
+  {
+    "date": "2022",
+    "content": "<b>Graduate Research Fellowship</b> from National Science Foundation"
+  },
+  {
+    "date": "2021",
+    "content": "<b>Dean's List for Academic Excellence</b> at University Name"
+  },
+  {
+    "date": "2020",
+    "content": "<b>Undergraduate Research Award</b> for outstanding research contributions",
+    "links": [
+      {
+        "text": "[certificate]",
+        "url": "assets/documents/research_award.pdf"
+      }
+    ]
+  }
+]

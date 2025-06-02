@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="{{ config.author | default('John Doe') }}" />
+    <meta name="description" content="{{ config.description | default('Personal academic website') }}" />
+    
+    <!-- Security headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; frame-ancestors 'none';">
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta http-equiv="Cache-Control" content="max-age=31536000">
+    
+    <title>{{ config.title | default('John Doe') }}</title>
+    <link rel="icon" href="{{ config.favicon | safe if config.favicon else 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>' }}" />
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="assets/fonts/nunito/nunito-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/nunito/nunito-semibold.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Load local font CSS -->
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    
+    <!-- Main CSS -->
+    <link href="build/css/output.css" rel="stylesheet">
+</head>
+<body class="font-sans {{ colors.bodyBg }} {{ colors.bodyText }}">
+    <main class="max-w-5xl mx-auto px-5 py-8 md:px-8 md:py-12">
+        {% include 'partials/header.html' %}
+        
+        {% if logos %}
+            {% include 'partials/logos.html' %}
+        {% endif %}
+        
+        {% if news %}
+            {% with section_id='news', section_title='News', items=news %}
+                {% include 'partials/timelines.html' %}
+            {% endwith %}
+        {% endif %}
+        
+        {% if publications %}
+            {% include 'partials/publications.html' %}
+        {% endif %}
+
+        {% if honors %}
+            {% with section_id='honors', section_title='Honors & Awards', items=honors %}
+                {% include 'partials/timelines.html' %}
+            {% endwith %}
+        {% endif %}
+    </main>
+    
+    {% include 'partials/footer.html' %}
+</body>
+</html>
