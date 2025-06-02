@@ -232,6 +232,8 @@ class WebsiteGenerator:
         
         # Load content and render template
         data = self.load_content_data()
+        
+        # Build main page
         template = self.env.get_template('base.html')
         html = template.render(**data)
         
