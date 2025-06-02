@@ -131,11 +131,6 @@ Thumbs.db
 *.orig
 *.log
 
-# Tailwind CSS build artifacts
-# We want to track the final CSS
-# *.css
-# *.css.map
-
 # Lock files
 Pipfile.lock
 poetry.lock
@@ -147,3 +142,6 @@ poetry.lock
 *.so
 *.dll
 *.dylib
+
+# Keep package-lock.json for reproducible builds
+!package-lock.json
