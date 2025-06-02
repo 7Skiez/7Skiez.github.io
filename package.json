@@ -1,0 +1,13 @@
+{
+  "name": "academic-website",
+  "version": "1.0.0",
+  "description": "Academic personal website generator",
+  "scripts": {
+    "build:css": "tailwindcss -i ./templates/styles.css -o ./build/css/output.css --minify"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.17"
+  }
+} 
