@@ -36,6 +36,8 @@ Thumbs.db
 # Build output
 _site/
 _site_dev/
+build/
+index.html
 
 # Node
 node_modules/
