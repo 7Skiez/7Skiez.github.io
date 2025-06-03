@@ -2,8 +2,6 @@
 
 A streamlined, minimal static site generator for academic personal websites, built with Python and Tailwind CSS.
 
-## Key Features
-
 ## Features
 
 - 🎨 Clean and modern design
